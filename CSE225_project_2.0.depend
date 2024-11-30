@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1732940922 source:d:\cpp_projects\cse225projects\cse225_project_2.0\coaches.cpp
+	"Coaches.h"
+	<fstream>
+	<sstream>
+
+1732898262 d:\cpp_projects\cse225projects\cse225_project_2.0\coaches.h
+	<string>
+	<iostream>
+
+1732942741 source:d:\cpp_projects\cse225projects\cse225_project_2.0\main.cpp
+	"nocs.h"
+
+1732943124 d:\cpp_projects\cse225projects\cse225_project_2.0\nocs.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+
+1732943124 source:d:\cpp_projects\cse225projects\cse225_project_2.0\nocs.cpp
+	"nocs.h"
+
