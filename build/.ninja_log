@@ -1,7 +1,0 @@
-# ninja log v6
-1	420	1733648540827302006	CMakeFiles/OlympicsInformationSystem.dir/lib/LinkedList.cpp.o	a8c1d4eb6b00bb8a
-1	431	1733648540827302006	CMakeFiles/OlympicsInformationSystem.dir/lib/Node.cpp.o	62b5dba307d70f9d
-1	493	1733648540827302006	CMakeFiles/OlympicsInformationSystem.dir/main.cpp.o	1f80dcb2b077529e
-1	677	1733648540827302006	CMakeFiles/OlympicsInformationSystem.dir/lib/Utils.cpp.o	9b8459430f756060
-1	805	1733648540827302006	CMakeFiles/OlympicsInformationSystem.dir/lib/Database.cpp.o	b8e06d6da10c3cab
-805	869	1733648541630640656	OlympicsInformationSystem	a94eaa5dd02ddc13
