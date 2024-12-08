@@ -1,0 +1,3 @@
+/home/sujat/projects/CSE225-summer24-project/build/CMakeFiles/OlympicsInformationSystem.dir
+/home/sujat/projects/CSE225-summer24-project/build/CMakeFiles/edit_cache.dir
+/home/sujat/projects/CSE225-summer24-project/build/CMakeFiles/rebuild_cache.dir

@@ -18,15 +18,16 @@ private:
     Node* head;
     Node* tail;
     int size;
-    vector<string> columns;
+
 
 public:
+    vector<string> columns;
     LinkedList();
     ~LinkedList();
 
     void insert(const vector<string>& rowData);
     void remove(int index); // Removes node at specified index
-    Node* search(const string& key, string& column); // Searches for a key in a specific column
+    Node* search(const string& key, int& columnIndex); // Searches for a key in a specific column
     void display() const; // Prints all nodes
 
     int getSize() const;

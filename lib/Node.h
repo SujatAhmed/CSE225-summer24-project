@@ -12,7 +12,8 @@
 
 using namespace std;
 
-struct Node {
+class Node {
+public:
     vector<string> data; // Stores a row's values as strings
     Node* next; // Pointer to the next node in the linked list
 

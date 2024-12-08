@@ -22,7 +22,7 @@ public:
     void loadData(const string& filename); // Loads data from a CSV file into a linked list
     void insert(const string& tableName, const vector<string>& rowData);
     void remove(const string& tableName, int index);
-    Node* search(const string& tableName, const string& key, int columnIndex);
+    Node* search(const string& tableName, const string& key, int& columnIndex);
     void displayTable(const string& tableName);
     void displayAllTables();
 
