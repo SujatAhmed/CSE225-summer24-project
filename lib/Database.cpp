@@ -1,26 +1,35 @@
 //
 // Created by sujat on 12/7/24.
+
 #include "Database.h"
+#include "LinkedList.h"
 #include "Utils.h" // For split and parseCSV functions
 #include <iostream>
 #include <stdexcept>
+#include <memory> // For shared_ptr
 
 using namespace std;
 
 // Constructor
 Database::Database() {}
 
+// Destructor to free dynamically allocated memory
+Database::~Database() {
+    for (auto& pair : tables) {
+        delete pair.second;
+    }
+}
+
 // Load data from a CSV file into a linked list
-void Database::loadData(const string& filename) {
+void Database::loadData(const string& filename, LinkedList* a) {
+    // Generate headers and parse CSV file
+    vector<string> headers = generateHeaders(filename);
+    a->columns = headers;
+    parseCSV(filename, a);
 
-    /*if (data.empty()) {
-        throw runtime_error("CSV file is empty or could not be parsed.");
-    }*/
-    LinkedList list;
-
-    list.columns= generateHeaders(filename);
-    parseCSV(filename, list);
-    tables[filename] = list;
+    // Store the linked list in the map
+    tables[filename] = a;
+    cout << "Data loaded into table: " << filename << endl;
 }
 
 // Insert a new row into a specific table
@@ -29,7 +38,7 @@ void Database::insert(const string& tableName, const vector<string>& rowData) {
         throw invalid_argument("Table " + tableName + " does not exist.");
     }
 
-    tables[tableName].insert(rowData);
+    tables[tableName]->insert(rowData);
     cout << "Row inserted into " << tableName << " successfully." << endl;
 }
 
@@ -39,7 +48,7 @@ void Database::remove(const string& tableName, int index) {
         throw invalid_argument("Table " + tableName + " does not exist.");
     }
 
-    tables[tableName].remove(index);
+    tables[tableName]->remove(index);
     cout << "Row at index " << index << " removed from " << tableName << " successfully." << endl;
 }
 
@@ -49,7 +58,7 @@ Node* Database::search(const string& tableName, const string& key, int& columnIn
         throw invalid_argument("Table " + tableName + " does not exist.");
     }
 
-    return tables[tableName].search(key, columnIndex);
+    return tables[tableName]->search(key, columnIndex);
 }
 
 // Display all rows in a specific table
@@ -58,14 +67,14 @@ void Database::displayTable(const string& tableName) {
         throw invalid_argument("Table " + tableName + " does not exist.");
     }
 
-    tables[tableName].display();
+    tables[tableName]->display();
 }
 
 // Display all tables in the database
 void Database::displayAllTables() {
     for (const auto& pair : tables) {
         cout << "Table: " << pair.first << endl;
-        pair.second.display();
+        pair.second->display();
         cout << endl;
     }
 }
@@ -76,6 +85,6 @@ LinkedList* Database::getTable(const string& tableName) {
         return nullptr;
     }
 
-    return &tables[tableName];
+    return tables[tableName];
 }
 

@@ -2,31 +2,31 @@
 // Created by sujat on 12/7/24.
 //
 
-
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include <unordered_map>
-#include <string>
 #include "LinkedList.h"
+#include <string>
+#include <unordered_map>
 
 using namespace std;
 
 class Database {
 private:
-    unordered_map<string, LinkedList> tables; // Maps filenames to linked lists
-
 public:
-    Database();
+  unordered_map<string, LinkedList *> tables; // Maps filenames to linked lists
+  Database();
+  ~Database();
 
-    void loadData(const string& filename); // Loads data from a CSV file into a linked list
-    void insert(const string& tableName, const vector<string>& rowData);
-    void remove(const string& tableName, int index);
-    Node* search(const string& tableName, const string& key, int& columnIndex);
-    void displayTable(const string& tableName);
-    void displayAllTables();
+  void loadData(const string &filename,
+                LinkedList *a); // Loads data from a CSV file into a linked list
+  void insert(const string &tableName, const vector<string> &rowData);
+  void remove(const string &tableName, int index);
+  Node *search(const string &tableName, const string &key, int &columnIndex);
+  void displayTable(const string &tableName);
+  void displayAllTables();
 
-    LinkedList* getTable(const string& tableName);
+  LinkedList *getTable(const string &tableName);
 };
 
 #endif // DATABASE_H

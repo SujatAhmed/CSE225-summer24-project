@@ -9,7 +9,6 @@
 #include <sstream>
 #include <stdexcept>
 #include <iostream>
-#include "csv.h"
 #include "LinkedList.h"
 
 using namespace std;
@@ -40,11 +39,13 @@ vector<string> generateHeaders(const string& filename) {
 
     // Split the header line into column names
     vector<string> headers = split(header_line, ',');
-    cout << "Headers: ";
+
+    /*cout << "Headers: ";
     for (const auto& header : headers) {
         cout << header << " ";
     }
-    cout << endl;
+    cout << endl;*/
+
     return headers;
 
 
@@ -52,7 +53,7 @@ vector<string> generateHeaders(const string& filename) {
 
 
 
-void parseCSV(const string& filename, LinkedList l) {
+void parseCSV(const string& filename, LinkedList* l) {
     ifstream file(filename);
     if (!file.is_open()) {
         cerr << "Error opening file: " << filename << endl;
@@ -69,9 +70,13 @@ void parseCSV(const string& filename, LinkedList l) {
         while (getline(ss, cell, ',')) {
             row.push_back(cell);
         }
+        /*for (const string& value : row) {
+            cout << value << " ";
+        }
+        cout << endl;*/
 
         // Add the row to the linked list
-        l.insert(row);
+        l->insert(row);
     }
 
     file.close();

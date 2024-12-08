@@ -7,14 +7,13 @@
 
 #include <string>
 #include <vector>
-#include "csv.h"
 #include "LinkedList.h"
 
 using namespace std;
 
 vector<string> split(const string& line, char delimiter);
 vector<string> generateHeaders(const string& filename);
-void parseCSV(const string& filename, LinkedList l);
+void parseCSV(const string& filename, LinkedList* l);
 
 #endif // UTILS_H
 
