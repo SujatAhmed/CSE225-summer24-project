@@ -18,8 +18,7 @@ public:
   Database();
   ~Database();
 
-  void loadData(const string &filename,
-                LinkedList *a); // Loads data from a CSV file into a linked list
+  void loadData(const string &filename); // Loads data from a CSV file into a linked list
   void insert(const string &tableName, const vector<string> &rowData);
   void remove(const string &tableName, int index);
   Node *search(const string &tableName, const string &key, int &columnIndex);

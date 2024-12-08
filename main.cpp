@@ -12,9 +12,11 @@ int main() {
   string filename =
       "/home/sujat/projects/CSE225-summer24-project/data/coaches.csv";
 
-
-	LinkedList* l = new LinkedList();
-	d.loadData(filename, l);
-	d.getTable(filename)->display();
-
+  d.loadData(filename);
+	LinkedList* l = d.getTable(filename);
+	//l->display();
+	l->displayColumns();
+	cout << l->getHead()<<endl;
+	cout << l->getSize()<<endl;
+	
 }

@@ -21,14 +21,15 @@ Database::~Database() {
 }
 
 // Load data from a CSV file into a linked list
-void Database::loadData(const string& filename, LinkedList* a) {
+void Database::loadData(const string& filename) {
     // Generate headers and parse CSV file
     vector<string> headers = generateHeaders(filename);
-    a->columns = headers;
-    parseCSV(filename, a);
+    LinkedList* l = new LinkedList();
+    l->columns = headers;
+    parseCSV(filename, l);
 
     // Store the linked list in the map
-    tables[filename] = a;
+    tables[filename] = l;
     cout << "Data loaded into table: " << filename << endl;
 }
 

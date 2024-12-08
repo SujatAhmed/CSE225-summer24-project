@@ -31,7 +31,7 @@ void LinkedList::insert(const vector<string> &rowData) {
     tail->next = newNode;
     tail = newNode;
   }
-    //cout << head<< endl;
+  // cout << head<< endl;
 
   size++;
 }
@@ -84,13 +84,18 @@ void LinkedList::display() const {
   Node *current = head;
   cout << head;
 
-
   while (current != NULL) {
     for (const string &value : current->data) {
       cout << value << " ";
     }
     cout << endl;
     current = current->next;
+  }
+}
+void LinkedList::displayColumns() {
+
+  for (const string &value : columns) {
+    cout << value << " ";
   }
 }
 
