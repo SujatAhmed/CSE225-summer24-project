@@ -1,22 +1,20 @@
 #include "Database.h"
-#include "LinkedList.h"
 #include "Node.cpp"
-#include "Utils.h"
-#include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
 
   Database d;
-  string filename =
-      "/home/sujat/projects/CSE225-summer24-project/data/coaches.csv";
+  string f1 = "/home/sujat/projects/CSE225-summer24-project/test-csv-dir/SampleCSVFile_2kb.csv";
+  string dir = "/home/sujat/projects/CSE225-summer24-project/test-csv-dir";
+  d.loadDatabase(dir);
+  d.getTable("SampleCSVFile_2kb.csv")->display();
 
-  d.loadData(filename);
-	LinkedList* l = d.getTable(filename);
-	//l->display();
-	l->displayColumns();
-	cout << l->getHead()<<endl;
-	cout << l->getSize()<<endl;
+  
+  
+  
+
+
 	
 }
