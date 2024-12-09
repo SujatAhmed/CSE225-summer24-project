@@ -82,7 +82,6 @@ Node *LinkedList::search(const string &key, int &columnIndex) {
 // Display all nodes in the list
 void LinkedList::display() const {
   Node *current = head;
-  cout << head;
 
   while (current != NULL) {
     for (const string &value : current->data) {
