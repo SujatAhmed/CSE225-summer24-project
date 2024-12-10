@@ -62,13 +62,6 @@ void Database::saveDatabase(const string &directoryPath) {
       continue;
     }
 
-    // Write the headers
-    for (size_t i = 0; i < table->columns.size(); ++i) {
-      outFile << table->columns[i];
-      if (i != table->columns.size() - 1)
-        outFile << ",";
-    }
-    outFile << endl;
 
     // Write the rows
     Node *current = table->getHead();
