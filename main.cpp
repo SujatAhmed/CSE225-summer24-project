@@ -1,6 +1,19 @@
-#include <iostream>
+#include "Database.h"
+#include "Node.cpp"
+#include <string>
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+  Database d;
+  string dir = "/home/sujat/projects/CSE225-summer24-project/test-csv-dir";
+  d.loadDatabase(dir);
+  d.getTable("SampleCSVFile_2kb.csv")->display();
+
+  
+  
+  
+
+
+	
 }
