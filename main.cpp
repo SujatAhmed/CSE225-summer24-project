@@ -9,11 +9,4 @@ int main() {
   string dir = "/home/sujat/projects/CSE225-summer24-project/data";
   d.loadDatabase(dir);
   d.getTable("medals.csv")->display();
-
-  
-  
-  
-
-
-	
 }

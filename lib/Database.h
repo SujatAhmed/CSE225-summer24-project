@@ -13,14 +13,19 @@ using namespace std;
 
 class Database {
 private:
+  void loadData(
+      const string
+          &filename); // Loads data from a CSV file into a linked list,
+                      // made private because it should not be used outside
+                      // of loadDatabase(), if a new csv file is to be
+                      // added to the database, the user should put it in $dir
 public:
   unordered_map<string, LinkedList *> tables; // Maps filenames to linked lists
   Database();
   ~Database();
 
-  void loadData(const string &filename); // Loads data from a CSV file into a linked list
-  void loadDatabase(const string& directoryPath);
-  void saveDatabase(const string& directoryPath);
+  void loadDatabase(const string &directoryPath);
+  void saveDatabase(const string &directoryPath);
   void insert(const string &tableName, const vector<string> &rowData);
   void remove(const string &tableName, int index);
   Node *search(const string &tableName, const string &key, int &columnIndex);

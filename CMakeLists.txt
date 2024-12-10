@@ -26,11 +26,11 @@ set(LIBRARY_HEADERS
 )
 
 # Add an executable target
-add_executable(OlympicsInformationSystem ${SOURCE_FILES} ${LIBRARY_SOURCES} ${LIBRARY_HEADERS})
+add_executable(main ${SOURCE_FILES} ${LIBRARY_SOURCES} ${LIBRARY_HEADERS})
 
 # Optionally, if you have any include directories
 # Add the "lib" directory to the include paths
-target_include_directories(OlympicsInformationSystem PRIVATE lib)
+target_include_directories(main PRIVATE lib)
 
 # If you want to add other directories (e.g., "data" and "results"), they are data files
 # and typically not added to the build, but you can specify a custom folder for convenience
