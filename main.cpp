@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 
   Database d;
-  string dir = "/home/sujat/projects/CSE225-summer24-project/data";
+  string dir = "/home/sujat/projects/CSE225-summer24-project/test-csv-dir";
   d.loadDatabase(dir);
-  d.getTable("medals.csv")->display();
+
 }
