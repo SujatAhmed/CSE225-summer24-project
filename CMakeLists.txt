@@ -9,12 +9,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Include directories
-include_directories(lib)
+include_directories(include)
 
 # Gather source files
 file(GLOB SOURCES "src/*.cpp")
-file(GLOB HEADERS "lib/*.h")
+file(GLOB HEADERS "include/*.h")
+# Find Python libraries
 
-# Add the executable
-add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_executable(${PROJECT_NAME} main.cpp ${SOURCES} ${HEADERS})
 
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets)
