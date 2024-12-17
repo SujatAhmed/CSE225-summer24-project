@@ -1,12 +1,5 @@
 
 #include <QApplication>
-#include <QDir>
-#include <QLabel>
-#include <QPixmap>
-#include <QPushButton>
-#include <QResizeEvent>
-#include <QVBoxLayout>
-#include <QWidget>
 #include "ParisOlympicsAnalysis.h"
 
 
