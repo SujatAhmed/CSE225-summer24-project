@@ -1,13 +1,15 @@
 
-#include <QApplication>
-#include "ParisOlympicsAnalysis.h"
 
+#include <matplot/matplot.h>
+#include <vector>
+#include <string>
+#include "Database.h"
+#include <iostream>
+using namespace std;
 
-int main(int argc, char *argv[]) {
-  QApplication app(argc, argv);
-
-  ParisOlympicsAnalysis viewer;
-  viewer.show();
-  return app.exec();
+int main() { 
+  Database d;
+  d.loadDatabase("/home/sujat/projects/CSE225-summer24-project/data/");
+  vector<string> *s = new vector<string>();
 }
 

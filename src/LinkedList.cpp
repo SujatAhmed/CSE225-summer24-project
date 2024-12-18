@@ -5,6 +5,8 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <stdexcept>
+#include <strings.h>
+#include <vector>
 
 using namespace std;
 
@@ -65,7 +67,7 @@ void LinkedList::remove(int index) {
 }
 
 // Search for a key in a specific column
-Node *LinkedList::search(const string &key, int &columnIndex) {
+Node *LinkedList::search(int rowno) {
   Node *current = head;
 
   while (current) {
@@ -91,6 +93,15 @@ void LinkedList::display() const {
     current = current->next;
   }
 }
+void LinkedList::returnColumn(int index, vector<string> *s) {
+  Node *current = head;
+  while (current != NULL) {
+    cout << current->data[index] << endl;
+    s->push_back(current->data[index]);
+    current = current->next;
+  }
+}
+
 void LinkedList::displayColumns() {
 
   for (const string &value : columns) {

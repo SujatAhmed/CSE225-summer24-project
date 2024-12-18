@@ -27,9 +27,10 @@ public:
 
     void insert(const vector<string>& rowData);
     void remove(int index); // Removes node at specified index
-    Node* search(const string& key, int& columnIndex); // Searches for a key in a specific column
+    Node* search(int rowno); // Searches for a key in a specific column
     void display() const; // Prints all nodes
     void displayColumns();
+    void returnColumn(int index, vector<string>* s);
 
     int getSize() const;
     Node* getHead() const;

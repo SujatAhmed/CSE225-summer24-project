@@ -1,5 +1,3 @@
-
-
 cmake_minimum_required(VERSION 3.10)
 
 # Project name
@@ -21,6 +19,7 @@ set(GUI_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/gui/include)
 
 # Include directories
 include_directories(${INCLUDE_DIR} ${GUI_INCLUDE_DIR})
+add_subdirectory(matplotplusplus)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 qt_wrap_ui(UI ${GUI_SRC_DIR}/mainwindow.ui)
@@ -36,10 +35,6 @@ file(GLOB HEADERS
     ${GUI_INCLUDE_DIR}/*.h
 )
 
-
-
-
-
 add_executable(${PROJECT_NAME}
     main.cpp
     ${SOURCES}
@@ -47,5 +42,6 @@ add_executable(${PROJECT_NAME}
     ${UI}
 )
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
-target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets)
+
+target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Gui Qt6::Widgets matplot)
 
