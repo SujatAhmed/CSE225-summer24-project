@@ -1,4 +1,5 @@
 medal_date,medal_type,medal_code,name,gender,country_code,country,country_long,nationality_code,nationality,nationality_long,team,team_gender,discipline,event,event_type,url_event,birth_date,code_athlete,code_team,is_medallist
+medal_date,medal_type,medal_code,name,gender,country_code,country,country_long,nationality_code,nationality,nationality_long,team,team_gender,discipline,event,event_type,url_event,birth_date,code_athlete,code_team,is_medallist
 2024-07-27,Gold Medal,1.0,EVENEPOEL Remco,Male,BEL,Belgium,Belgium,BEL,Belgium,Belgium,,,Cycling Road,Men's Individual Time Trial,ATH,/en/paris-2024/results/cycling-road/men-s-individual-time-trial/fnl-000100--,2000-01-25,1903136,,True
 2024-07-27,Silver Medal,2.0,GANNA Filippo,Male,ITA,Italy,Italy,ITA,Italy,Italy,,,Cycling Road,Men's Individual Time Trial,ATH,/en/paris-2024/results/cycling-road/men-s-individual-time-trial/fnl-000100--,1996-07-25,1923520,,True
 2024-07-27,Bronze Medal,3.0,van AERT Wout,Male,BEL,Belgium,Belgium,BEL,Belgium,Belgium,,,Cycling Road,Men's Individual Time Trial,ATH,/en/paris-2024/results/cycling-road/men-s-individual-time-trial/fnl-000100--,1994-09-15,1903147,,True

@@ -53,6 +53,7 @@ vector<string> generateHeaders(const string& filename) {
 
 
 
+
 void parseCSV(const string& filename, LinkedList* l) {
     ifstream file(filename);
     if (!file.is_open()) {
@@ -63,26 +64,32 @@ void parseCSV(const string& filename, LinkedList* l) {
     string line;
     while (getline(file, line)) {
         stringstream ss(line);
-        string cell;
         vector<string> row;
+        string cell;
+        bool insideQuotes = false;
+        string currentCell;
 
-        // Split the line by commas
-        while (getline(ss, cell, ',')) {
-            row.push_back(cell);
+        while (ss.good()) {
+            char c = ss.get();
+            if (c == '"') {
+                insideQuotes = !insideQuotes; // Toggle the inside-quote state
+            } else if (c == ',' && !insideQuotes) {
+                // End of cell
+                row.push_back(currentCell);
+                currentCell.clear();
+            } else if (c != EOF) {
+                currentCell += c;
+            }
         }
-        /*for (const string& value : row) {
-            cout << value << " ";
+        // Add the last cell
+        if (!currentCell.empty()) {
+            row.push_back(currentCell);
         }
-        cout << endl;*/
 
         // Add the row to the linked list
         l->insert(row);
     }
 
     file.close();
-
-
 }
-
-
 

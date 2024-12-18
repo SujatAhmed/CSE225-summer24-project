@@ -28,7 +28,7 @@ public:
   void saveDatabase(const string &directoryPath);
   void insert(const string &tableName, const vector<string> &rowData);
   void remove(const string &tableName, int index);
-  Node *search(int rowno);
+  //Node *search(int rowno);
   void displayTable(const string &tableName);
   void displayAllTables();
 

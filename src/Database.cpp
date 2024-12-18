@@ -47,6 +47,21 @@ void Database::loadDatabase(const string &directoryPath) {
   }
   cout << "Database loaded from directory: " << directoryPath << endl;
 }
+string escapeCSVField(const string &field) {
+  if (field.find(',') != string::npos || field.find('"') != string::npos || field.find('\n') != string::npos) {
+    string escapedField = "\"";
+    for (char c : field) {
+      if (c == '"') {
+        escapedField += "\"\""; // Escape quotes
+      } else {
+        escapedField += c;
+      }
+    }
+    escapedField += "\"";
+    return escapedField;
+  }
+  return field;
+}
 
 void Database::saveDatabase(const string &directoryPath) {
   for (const auto &pair : tables) {
@@ -62,19 +77,12 @@ void Database::saveDatabase(const string &directoryPath) {
       continue;
     }
 
-    // Write the headers
-    for (size_t i = 0; i < table->columns.size(); ++i) {
-      outFile << table->columns[i];
-      if (i != table->columns.size() - 1)
-        outFile << ",";
-    }
-    outFile << endl;
 
     // Write the rows
     Node *current = table->getHead();
     while (current) {
       for (size_t i = 0; i < current->data.size(); ++i) {
-        outFile << current->data[i];
+        outFile << escapeCSVField(current->data[i]);
         if (i != current->data.size() - 1)
           outFile << ",";
       }
@@ -86,6 +94,8 @@ void Database::saveDatabase(const string &directoryPath) {
     cout << "Table saved: " << filePath << endl;
   }
 }
+
+// Helper function to escape fields for CSV format
 
 // Insert a new row into a specific table
 void Database::insert(const string &tableName, const vector<string> &rowData) {
@@ -109,14 +119,7 @@ void Database::remove(const string &tableName, int index) {
 }
 
 // Search for a key in a specific column of a table
-Node *Database::search(const string &tableName, const string &key,
-                       int &columnIndex) {
-  if (tables.find(tableName) == tables.end()) {
-    throw invalid_argument("Table " + tableName + " does not exist.");
-  }
 
-  return tables[tableName]->search(key, columnIndex);
-}
 
 // Display all rows in a specific table
 void Database::displayTable(const string &tableName) {

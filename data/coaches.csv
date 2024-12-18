@@ -1,4 +1,5 @@
 code,current,name,gender,function,category,country_code,country,country_long,disciplines,events,birth_date
+code,current,name,gender,function,category,country_code,country,country_long,disciplines,events,birth_date
 1533246,True,PEDRERO Ofelia,Female,Coach,C,MEX,Mexico,Mexico,Artistic Swimming,Team,1988-03-28
 1535775,True,RADHI SHENAISHIL,Male,Head Coach,C,IRQ,Iraq,Iraq,Football,Men,1965-07-01
 1536055,True,AFLAKIKHAMSEH Majid,Male,Coach,C,IRI,IR Iran,Islamic Republic of Iran,Taekwondo,,1973-08-26
@@ -8,9 +9,9 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1538313,True,FERRARA Fernando,Male,Head Coach,C,ARG,Argentina,Argentina,Hockey,,1968-07-24
 1538315,True,GULLA Alejandra,Female,Assistant Coach,C,ARG,Argentina,Argentina,Hockey,Women,1977-07-04
 1538317,True,CAPURRO Santiago,Male,Assistant Coach,C,ARG,Argentina,Argentina,Hockey,,1975-04-08
-1538745,True,RONCONI Mariano,Male,Head Coach,C,ARG,Argentina,Argentina,Hockey,,
-1538748,True,PAULON Ezequiel,Male,Assistant Coach,C,ARG,Argentina,Argentina,Hockey,,
-1538751,True,VILA Matias,Male,Assistant Coach,C,ARG,Argentina,Argentina,Hockey,,
+1538745,True,RONCONI Mariano,Male,Head Coach,C,ARG,Argentina,Argentina,Hockey
+1538748,True,PAULON Ezequiel,Male,Assistant Coach,C,ARG,Argentina,Argentina,Hockey
+1538751,True,VILA Matias,Male,Assistant Coach,C,ARG,Argentina,Argentina,Hockey
 1539598,True,KHEIRKHAH HAJIRASOULIAN Mohammadre.,Male,Coach,C,IRI,IR Iran,Islamic Republic of Iran,Artistic Gymnastics,,1965-06-27
 1540258,True,DAVIS DIAZ David,Male,Coach,C,MEX,Mexico,Mexico,Taekwondo,,1977-10-07
 1540259,True,MENDOZA MORA Abel,Male,Coach,C,MEX,Mexico,Mexico,Taekwondo,,1988-02-26
@@ -91,7 +92,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1562973,True,RANNER Thomas,Male,Assistant Coach,C,GER,Germany,Germany,Volleyball,Men,1987-07-31
 1562974,True,POSMYK Dominik,Male,Assistant Coach,C,GER,Germany,Germany,Volleyball,Men,1995-08-12
 1563661,True,SALLAH Mariama M.,Female,Coach,C,GAM,Gambia,Gambia,Taekwondo,,1975-01-17
-1563956,True,TUMILTY Mark,Male,Head Coach,C,IRL,Ireland,Ireland,Hockey,,
+1563956,True,TUMILTY Mark,Male,Head Coach,C,IRL,Ireland,Ireland,Hockey
 1563966,True,TOTH Balazs,Male,Coach,C,GER,Germany,Germany,Taekwondo,,1983-08-31
 1564287,True,QUSAI MUNIR,Male,Assistant Coach,C,IRQ,Iraq,Iraq,Football,Men,1980-04-12
 1564321,True,CRUZ LOPEZ Jose L,Male,Assistant Coach,C,PUR,Puerto Rico,Puerto Rico,Basketball,Men,1969-10-03
@@ -108,7 +109,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1565609,True,ALSADEQ Yazan,Male,Coach,C,JOR,Jordan,Jordan,Taekwondo,,1993-06-29
 1565612,True,ALJALLAD Riham,Female,Coach,C,JOR,Jordan,Jordan,Taekwondo,,1983-05-06
 1565657,True,KRAVCHENKO Sergiy,Male,Assistant Coach,C,UKR,Ukraine,Ukraine,Football,,1983-04-24
-1565672,True,ROTAN Ruslan,Male,Head Coach,C,UKR,Ukraine,Ukraine,Football,Men,
+1565672,True,ROTAN Ruslan,Male,Head Coach,C,UKR,Ukraine,Ukraine,Football,Men
 1565759,True,SIREKANYAN Gurgen,Male,Coach,C,JOR,Jordan,Jordan,Artistic Gymnastics,,1981-11-15
 1566325,True,FREHSE Gabriele,Female,Coach,C,AUT,Austria,Austria,Artistic Gymnastics,,1960-10-25
 1566746,True,SAHIN Ali,Male,Coach,C,TUR,Türkiye,Türkiye,Taekwondo,,1967-06-02
@@ -183,7 +184,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1891688,True,NAKAJIMA Takako,Female,Coach,C,JPN,Japan,Japan,Artistic Swimming,Team,1986-09-25
 1892047,True,KAPADZE Timur,Male,Head Coach,C,UZB,Uzbekistan,Uzbekistan,Football,Men,1981-09-05
 1892050,True,CHIGODAEV Sergey,Male,Assistant Coach,C,UZB,Uzbekistan,Uzbekistan,Football,,1987-06-28
-1893216,True,GILLE Guillaume,Male,Head Coach,C,FRA,France,France,Handball,Men,
+1893216,True,GILLE Guillaume,Male,Head Coach,C,FRA,France,France,Handball,Men
 1893217,True,MATHE Erick,Male,Assistant Coach,C,FRA,France,France,Handball,Men,1971-07-23
 1893323,True,ALONSO TAPIA Rosendo,Male,Coach,C,FRA,France,France,Taekwondo,,1979-10-03
 1893324,True,ALONSO TAPIA Gulsah,Female,Coach,C,FRA,France,France,Taekwondo,,1980-09-15
@@ -239,7 +240,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1897775,True,RA Sanghyun,Male,Coach,C,FIJ,Fiji,Fiji,Taekwondo,,1972-07-26
 1897904,True,KIM Hyou Mi,Female,Coach,C,KOR,Korea,Republic of Korea,Artistic Swimming,Duet,1983-11-30
 1898398,True,ROSILLO ATENCIA Jose Antonio,Male,Coach,C,NOR,Norway,Norway,Taekwondo,,1990-05-20
-1898540,True,LAI Yawen,Female,Assistant Coach,C,CHN,China,People's Republic of China,Volleyball,Women,
+1898540,True,LAI Yawen,Female,Assistant Coach,C,CHN,China,People's Republic of China,Volleyball,Women
 1898944,True,HERBERT Gordie,Male,Coach,C,GER,Germany,Germany,Basketball,Men,1959-02-16
 1898950,True,THOMAIDIS Lisa,Female,Coach,C,GER,Germany,Germany,Basketball,Women,1971-07-23
 1898951,True,PARSONS Sidney,Female,Assistant Coach,C,GER,Germany,Germany,Basketball,Women,1987-12-05
@@ -399,7 +400,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1918016,True,FUERBRINGER Matt,Male,Assistant Coach,C,USA,United States,United States of America,Volleyball,Men,1974-01-29
 1918018,True,SPERAW John,Male,Head Coach,C,USA,United States,United States of America,Volleyball,Men,1971-10-18
 1918019,True,WEBER Javi,Male,Assistant Coach,C,USA,United States,United States of America,Volleyball,Men,1966-01-06
-1918026,True,WALL Mike,Male,Assistant Coach,C,USA,United States,United States of America,Volleyball,Men,
+1918026,True,WALL Mike,Male,Assistant Coach,C,USA,United States,United States of America,Volleyball,Men
 1918543,True,TOKUMOTO Yukito,Male,Assistant Coach,C,JPN,Japan,Japan,Volleyball,Women,1976-10-09
 1918556,True,BLAIN Philippe,Male,Head Coach,C,JPN,Japan,Japan,Volleyball,Men,1960-05-20
 1918560,True,FUKATSU Takayuki,Male,Assistant Coach,C,JPN,Japan,Japan,Volleyball,Men,1988-11-09
@@ -463,8 +464,8 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1926604,True,COCKER Edwin,Male,Assistant Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Women,1980-11-03
 1926605,True,CAMA Tomasi,Male,Head Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Men,1980-11-11
 1926606,True,ROSS Stu,Male,Assistant Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Women,1976-01-26
-1926607,True,MURPHY Amanda,Female,Assistant Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Women,
-1926612,True,McMASTER Travis,Male,Assistant Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Men,
+1926607,True,MURPHY Amanda,Female,Assistant Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Women
+1926612,True,McMASTER Travis,Male,Assistant Coach,C,NZL,New Zealand,New Zealand,Rugby Sevens,Men
 1927174,True,ANNAN Alyson Regina,Female,Head Coach,C,CHN,China,People's Republic of China,Hockey,,1973-06-21
 1927222,True,LU Zhuan,Male,Head Coach,C,CHN,China,People's Republic of China,Rugby Sevens,Women,1983-11-18
 1927223,True,PASQUALETTI Massimo,Male,Assistant Coach,C,CHN,China,People's Republic of China,Rugby Sevens,Women,1988-08-11
@@ -493,7 +494,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1929643,True,YUSSUPOVA Aliya,Female,Coach,C,KAZ,Kazakhstan,Kazakhstan,Rhythmic Gymnastics,,1984-05-15
 1929644,True,DUISENGALIYEVA Danissa,Female,Coach,C,KAZ,Kazakhstan,Kazakhstan,Rhythmic Gymnastics,,1995-11-11
 1929663,True,NOLANO Claudio,Male,Coach,C,ITA,Italy,Italy,Taekwondo,,1975-09-22
-1929717,True,ALFARO RODRIGUEZ Santiago,Male,Assistant Coach,C,URU,Uruguay,Uruguay,Rugby Sevens,Men,
+1929717,True,ALFARO RODRIGUEZ Santiago,Male,Assistant Coach,C,URU,Uruguay,Uruguay,Rugby Sevens,Men
 1930009,True,LEE KIM Daniel,Male,Coach,C,URU,Uruguay,Uruguay,Taekwondo,,1979-01-31
 1930168,True,RENARD Herve,Male,Head Coach,C,FRA,France,France,Football,Women,1968-09-30
 1930169,True,BONADEI Laurent,Male,Assistant Coach,C,FRA,France,France,Football,,1969-11-03
@@ -503,8 +504,8 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1930295,True,KIM Kwangsu,Male,Coach,C,KAZ,Kazakhstan,Kazakhstan,Taekwondo,,1972-12-02
 1930296,True,BESBAYEV Olzhas,Male,Coach,C,KAZ,Kazakhstan,Kazakhstan,Taekwondo,,1986-12-16
 1930311,True,SAGYNAYEV Kanat,Male,Coach,C,KAZ,Kazakhstan,Kazakhstan,Taekwondo,,1973-11-09
-1930636,True,DOBLER Mauro,Male,Goalkeeper Coach,C,ARG,Argentina,Argentina,Football,,
-1930646,True,ECHEVERRY Alex,Male,Assistant Coach,C,COL,Colombia,Colombia,Football,,
+1930636,True,DOBLER Mauro,Male,Goalkeeper Coach,C,ARG,Argentina,Argentina,Football
+1930646,True,ECHEVERRY Alex,Male,Assistant Coach,C,COL,Colombia,Colombia,Football
 1930666,True,PHIRI Yona,Male,Goalkeeper Coach,C,ZAM,Zambia,Zambia,Football,Women,1980-04-27
 1930695,True,GRAND'PIERRE Naomy Hope,Female,Coach,C,HAI,Haiti,Haiti,Artistic Gymnastics,,1997-04-16
 1930765,True,LAMBDIN Stephen,Male,Coach,C,USA,United States,United States of America,Taekwondo,,1988-03-09
@@ -524,8 +525,8 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1933372,True,PIGNICZKI Krisztina,Female,Assistant Coach,C,HUN,Hungary,Hungary,Handball,Women,1975-09-18
 1933474,True,MASCHERANO Javier,Male,Head Coach,C,ARG,Argentina,Argentina,Football,Men,1984-06-08
 1933569,True,MARSIGLIA Angelo,Male,Head Coach,C,COL,Colombia,Colombia,Football,Women,1985-12-20
-1933763,True,RODRIGUEZ Lucas,Male,Assistant Coach,C,ARG,Argentina,Argentina,Football,,
-1934022,True,STILLITANO Leandro,Male,Assistant Coach,C,ARG,Argentina,Argentina,Football,,
+1933763,True,RODRIGUEZ Lucas,Male,Assistant Coach,C,ARG,Argentina,Argentina,Football
+1934022,True,STILLITANO Leandro,Male,Assistant Coach,C,ARG,Argentina,Argentina,Football
 1934443,True,AGUILAR ESTRADA Eduardo,Male,Assistant Coach,C,ESP,Spain,Spain,Hockey,,1976-12-06
 1934447,True,CALDAS Maximiliano,Male,Head Coach,C,ESP,Spain,Spain,Hockey,,1973-03-09
 1934451,True,GARCIA CUENCA Carlos,Male,Head Coach,C,ESP,Spain,Spain,Hockey,,1973-01-26
@@ -536,7 +537,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1934464,True,LAZARO REINA Jordi,Male,Coach,C,ESP,Spain,Spain,Hockey,,1987-06-28
 1934466,True,MOVELLAN de la MAZA Borja,Male,Coach,C,ESP,Spain,Spain,Hockey,,1979-12-24
 1934467,True,PALOMERO MARTIN Oscar,Male,Coach,C,ESP,Spain,Spain,Hockey,,1973-11-24
-1934811,True,PEREZ Carlos,Male,Goalkeeper Coach,C,COL,Colombia,Colombia,Football,Women,
+1934811,True,PEREZ Carlos,Male,Goalkeeper Coach,C,COL,Colombia,Colombia,Football,Women
 1934831,True,CANTWELL Lynne,Female,Head Coach,C,RSA,South Africa,South Africa,Rugby Sevens,,1981-09-27
 1934833,True,DAZEL Renfred,Male,Head Coach,C,RSA,South Africa,South Africa,Rugby Sevens,Women,1981-05-04
 1934834,True,MOLOPYANE Obakeng,Male,Assistant Coach,C,RSA,South Africa,South Africa,Rugby Sevens,Women,1993-03-17
@@ -595,16 +596,16 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1941686,True,BELAN Tatsiana,Female,Coach,C,AUS,Australia,Australia,Rhythmic Gymnastics,,1982-11-10
 1941689,True,LI Xiaoqing,Female,Coach,C,AUS,Australia,Australia,Artistic Gymnastics,,1971-01-14
 1941847,True,DOUMBIA Bounafou,Male,Goalkeeper Coach,C,MLI,Mali,Mali,Football,,1980-07-22
-1941852,True,BARRETO Diego,Male,Goalkeeper Coach,C,PAR,Paraguay,Paraguay,Football,,
+1941852,True,BARRETO Diego,Male,Goalkeeper Coach,C,PAR,Paraguay,Paraguay,Football
 1942626,True,DENIA Santi,Male,Head Coach,C,ESP,Spain,Spain,Football,Men,1974-03-09
 1942627,True,GORDO David,Male,Assistant Coach,C,ESP,Spain,Spain,Football,,1970-02-02
-1942638,True,MARTINEZ Ruben,Male,Goalkeeper Coach,C,ESP,Spain,Spain,Football,,
+1942638,True,MARTINEZ Ruben,Male,Goalkeeper Coach,C,ESP,Spain,Spain,Football
 1942803,True,ZIMMERMANN Matthieu,Male,Coach,C,BEL,Belgium,Belgium,Artistic Gymnastics,,1986-02-22
 1942804,True,EHREN Raoul,Male,Head Coach,C,BEL,Belgium,Belgium,Hockey,,1973-04-24
 1942806,True,McLEOD Shane,Male,Assistant Coach,C,BEL,Belgium,Belgium,Hockey,Men,1968-09-04
 1942816,True,GAMBLUCH Leonardo,Male,Coach,C,BEL,Belgium,Belgium,Taekwondo,,1973-09-03
 1942828,True,VARGA Zsolt,Male,Head Coach,C,HUN,Hungary,Hungary,Water Polo,Men,1972-03-09
-1942869,True,UGLESSICH Mariano,Male,Assistant Coach,C,PAR,Paraguay,Paraguay,Football,,
+1942869,True,UGLESSICH Mariano,Male,Assistant Coach,C,PAR,Paraguay,Paraguay,Football
 1943302,True,HAYES Emma,Female,Head Coach,C,USA,United States,United States of America,Football,Women,1976-10-18
 1943308,True,REDDY Denise,Female,Assistant Coach,C,USA,United States,United States of America,Football,Women,1970-09-14
 1943311,True,SEARLE Stuart,Male,Goalkeeper Coach,C,USA,United States,United States of America,Football,Women,1979-02-27
@@ -623,7 +624,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1945433,True,POTTER Anthony,Male,Assistant Coach,C,AUS,Australia,Australia,Hockey,,1972-05-11
 1945439,True,BATCH Colin,Male,Head Coach,C,AUS,Australia,Australia,Hockey,,1958-03-27
 1945443,True,STANIFORTH Dave,Male,Coach,C,AUS,Australia,Australia,Hockey,,1976-04-05
-1945447,True,MURRAY Emma,Female,Assistant Coach,C,AUS,Australia,Australia,Hockey,Women,
+1945447,True,MURRAY Emma,Female,Assistant Coach,C,AUS,Australia,Australia,Hockey,Women
 1945451,True,PURVIS Hugh,Male,Assistant Coach,C,AUS,Australia,Australia,Hockey,,1991-08-03
 1945457,True,DAVY Jeremy,Male,Coach,C,AUS,Australia,Australia,Hockey,,1973-07-03
 1945459,True,POWELL Katrina,Female,Head Coach,C,AUS,Australia,Australia,Hockey,,1972-04-08
@@ -686,7 +687,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1950187,True,WALSH Timothy,Male,Head Coach,C,AUS,Australia,Australia,Rugby Sevens,Women,1979-04-10
 1950509,True,BYDWELL Emilie,Female,Head Coach,C,USA,United States,United States of America,Rugby Sevens,Women,1985-08-31
 1950510,True,TEST Zack,Male,Assistant Coach,C,USA,United States,United States of America,Rugby Sevens,Women,1989-10-13
-1950515,True,FORD Trey,Male,Assistant Coach,C,USA,United States,United States of America,Rugby Sevens,Women,
+1950515,True,FORD Trey,Male,Assistant Coach,C,USA,United States,United States of America,Rugby Sevens,Women
 1950520,True,FRIDAY Mike,Male,Head Coach,C,USA,United States,United States of America,Rugby Sevens,Men,1972-04-25
 1950521,True,GREENING Phil,Male,Assistant Coach,C,USA,United States,United States of America,Rugby Sevens,Men,1975-10-03
 1951636,True,FERREIRA Marcel,Male,Coach,C,BRA,Brazil,Brazil,Artistic Swimming,,1986-10-17
@@ -723,7 +724,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1954503,True,THIBAULT Mike,Male,Assistant Coach,C,USA,United States,United States of America,Basketball,Women,1950-09-28
 1954505,True,WRIGHT Tanisha,Female,Coach,C,USA,United States,United States of America,Basketball,,1983-11-29
 1954672,True,KOLINISAU Ratu Osea,Male,Head Coach,C,FIJ,Fiji,Fiji,Rugby Sevens,Men,1985-11-17
-1955000,True,ARENHART ALVES Ismael,Male,Assistant Coach,C,BRA,Brazil,Brazil,Rugby Sevens,Women,
+1955000,True,ARENHART ALVES Ismael,Male,Assistant Coach,C,BRA,Brazil,Brazil,Rugby Sevens,Women
 1955021,True,BRODERICK William,Male,Head Coach,C,BRA,Brazil,Brazil,Rugby Sevens,Women,1992-09-17
 1955060,True,FERRER Alexander,Male,Coach,C,BRA,Brazil,Brazil,Artistic Swimming,,1975-08-25
 1955820,True,dos SANTOS Clayton,Male,Coach,C,BRA,Brazil,Brazil,Taekwondo,,1981-07-03
@@ -733,11 +734,11 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1955958,True,ONO Shoko,Female,Coach,C,AUS,Australia,Australia,Artistic Swimming,Team,1988-11-09
 1956101,True,SOARES Mateus Joao Felgueiras,Male,Coach,C,TLS,Timor-Leste,Democratic Republic of Timor-Leste,Taekwondo,,1985-02-12
 1956202,True,LUZON Guy,Male,Head Coach,C,ISR,Israel,Israel,Football,Men,1975-08-17
-1956206,True,CHOEN Haim,Male,Assistant Coach,C,ISR,Israel,Israel,Football,,
+1956206,True,CHOEN Haim,Male,Assistant Coach,C,ISR,Israel,Israel,Football
 1956383,True,BUTALA-KOVACIC Petra,Female,Coach,C,SRB,Serbia,Serbia,Taekwondo,,1988-02-29
 1956384,True,JOVIC Dragan,Male,Coach,C,SRB,Serbia,Serbia,Taekwondo,,1969-05-21
 1956385,True,SAVICEVIC Veljko,Male,Coach,C,SRB,Serbia,Serbia,Taekwondo,,1978-08-19
-1956422,True,BUCHNIK Victor,Male,Goalkeeper Coach,C,ISR,Israel,Israel,Football,,
+1956422,True,BUCHNIK Victor,Male,Goalkeeper Coach,C,ISR,Israel,Israel,Football
 1956472,True,BILIC Darko,Male,Assistant Coach,C,SRB,Serbia,Serbia,Water Polo,Men,1978-03-06
 1956473,True,CIRIC Stefan,Male,Assistant Coach,C,SRB,Serbia,Serbia,Water Polo,Men,1985-08-15
 1956476,True,STEVANOVIC Uros,Male,Head Coach,C,SRB,Serbia,Serbia,Water Polo,Men,1982-10-08
@@ -784,7 +785,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1960844,True,BARRIEAU Jocelyn,Female,Assistant Coach,C,CAN,Canada,Canada,Rugby Sevens,Women,1982-02-09
 1960845,True,HANRATTY Jack,Male,Head Coach,C,CAN,Canada,Canada,Rugby Sevens,Women,1989-05-09
 1960848,True,MONAGHAN Iain,Male,Assistant Coach,C,CAN,Canada,Canada,Rugby Sevens,Women,1980-08-08
-1960860,True,JOYCE Jenn,Female,Assistant Coach,C,CAN,Canada,Canada,Rugby Sevens,Women,
+1960860,True,JOYCE Jenn,Female,Assistant Coach,C,CAN,Canada,Canada,Rugby Sevens,Women
 1961375,True,KONE Thierry,Male,Coach,C,CIV,Côte d'Ivoire,Côte d'Ivoire,Taekwondo,,1981-07-01
 1961586,True,VOLAVOLA Timoci,Male,Assistant Coach,C,FIJ,Fiji,Fiji,Rugby Sevens,Women,1978-09-27
 1961712,True,TUIFUA Tevita,Male,Head Coach,C,TGA,Tonga,Tonga,Rugby Sevens,,1975-10-15
@@ -804,12 +805,12 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1963627,True,LOPEZ ROMERO Victor Hugo,Male,Assistant Coach,C,JPN,Japan,Japan,Handball,Men,1982-11-23
 1963628,True,ORTEGA PEREZ Antonio Carlos,Male,Head Coach,C,JPN,Japan,Japan,Handball,Men,1971-07-14
 1964423,True,ROCHA de REZENDE Bernardo,Male,Head Coach,C,BRA,Brazil,Brazil,Volleyball,Men,1959-08-25
-1964448,True,RIBAS Giuliano,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Men,
+1964448,True,RIBAS Giuliano,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Men
 1964453,True,LAGES GUIMARAES Jose Roberto,Male,Head Coach,C,BRA,Brazil,Brazil,Volleyball,Women,1954-07-31
-1964473,True,DO REGO BARROS JUNIOR Paulo,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Women,
-1964481,True,LEONALDO Roberley Luiz,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Men,
-1964485,True,TABACH Ricardo,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Men,
-1964492,True,COPPINI FERNANDES Wagner Luiz,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Women,
+1964473,True,DO REGO BARROS JUNIOR Paulo,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Women
+1964481,True,LEONALDO Roberley Luiz,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Men
+1964485,True,TABACH Ricardo,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Men
+1964492,True,COPPINI FERNANDES Wagner Luiz,Male,Assistant Coach,C,BRA,Brazil,Brazil,Volleyball,Women
 1965161,True,KEET Marcelle,Female,Assistant Coach,C,RSA,South Africa,South Africa,Hockey,,1984-10-25
 1965168,True,BONNET Giles,Male,Head Coach,C,RSA,South Africa,South Africa,Hockey,,1965-02-10
 1965644,True,GIL Carlos,Male,Coach,C,PAN,Panama,Panama,Artistic Gymnastics,,1985-06-12
@@ -824,8 +825,8 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1967468,True,PARADELO David,Male,Head Coach,C,CAN,Canada,Canada,Water Polo,Women,1985-10-07
 1967471,True,POSTERIVO Stefano,Male,Assistant Coach,C,CAN,Canada,Canada,Water Polo,Women,1967-11-02
 1967472,True,CAMPBELL Cora,Female,Assistant Coach,C,CAN,Canada,Canada,Water Polo,Women,1974-05-28
-1967642,True,IGLESIAS Rodrigo,Male,Assistant Coach,C,BRA,Brazil,Brazil,Football,,
-1967672,True,ALCANTARA Edson,Male,Goalkeeper Coach,C,BRA,Brazil,Brazil,Football,,
+1967642,True,IGLESIAS Rodrigo,Male,Assistant Coach,C,BRA,Brazil,Brazil,Football
+1967672,True,ALCANTARA Edson,Male,Goalkeeper Coach,C,BRA,Brazil,Brazil,Football
 1967683,True,ELIAS Arthur,Male,Head Coach,C,BRA,Brazil,Brazil,Football,Women,1981-08-05
 1968210,True,LALOMILO Faamaoni,Male,Assistant Coach,C,SAM,Samoa,Samoa,Rugby Sevens,Men,1971-01-30
 1968247,True,CIRKOVIC Vedran,Male,Assistant Coach,C,AUS,Australia,Australia,Water Polo,Men,1988-03-14
@@ -846,7 +847,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1968871,True,DOUDESIS Eva,Male,Head Coach,C,NED,Netherlands,Netherlands,Water Polo,Women,1985-03-12
 1968964,True,MOGHANLOU Bijan,Male,Coach,C,EGY,Egypt,Egypt,Taekwondo,,1969-10-21
 1969275,True,SICOT David Patrick,Male,Coach,C,LBN,Lebanon,Lebanon,Taekwondo,,1985-10-24
-1969357,True,SEKTIOUI Tarik,Male,Head Coach,C,MAR,Morocco,Morocco,Football,Men,
+1969357,True,SEKTIOUI Tarik,Male,Head Coach,C,MAR,Morocco,Morocco,Football,Men
 1969386,True,HADJI Youssouf,Male,Assistant Coach,C,MAR,Morocco,Morocco,Football,,1980-02-25
 1969466,True,BADAWI Ghanem,Male,Coach,C,SYR,Syria,Syrian Arab Republic,Artistic Gymnastics,,1980-04-01
 1970225,True,van der VEEN Jose,Female,Coach,C,NED,Netherlands,Netherlands,Artistic Gymnastics,,1977-05-18
@@ -862,7 +863,7 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 1970859,True,SOKOLOVA Natalia,Female,Coach,C,CYP,Cyprus,Cyprus,Rhythmic Gymnastics,,1976-06-14
 1970880,True,OGEYINGBO Ayodeji,Male,Coach,C,NGR,Nigeria,Nigeria,Basketball,,1994-06-30
 1970974,True,DERAEDT Laurent,Male,Goalkeeper Coach,C,MAR,Morocco,Morocco,Football,,1973-10-20
-1971523,True,LESZNER Joe,Male,Coach,C,CAN,Canada,Canada,Archery,,
+1971523,True,LESZNER Joe,Male,Coach,C,CAN,Canada,Canada,Archery
 1972037,True,TICHELMAN Thomas,Male,Assistant Coach,C,NED,Netherlands,Netherlands,Hockey,,1960-03-22
 1972052,True,van ASS Paul,Male,Head Coach,C,NED,Netherlands,Netherlands,Hockey,,1960-08-16
 1972055,True,DELMEE Jeroen,Male,Head Coach,C,NED,Netherlands,Netherlands,Hockey,,1973-03-08
@@ -964,12 +965,12 @@ code,current,name,gender,function,category,country_code,country,country_long,dis
 9230002,True,HERDEIRO Alvaro Francisco,Male,Assistant Coach,C,BRA,Brazil,Brazil,Handball,Women,1969-06-23
 9230003,True,MAROJA Gabriel Augusto,Male,Assistant Coach,C,BRA,Brazil,Brazil,Handball,Women,1996-05-07
 9230006,True,ALONSO BERNARDO Jessica,Female,Assistant Coach,C,ESP,Spain,Spain,Handball,Women,1983-09-20
-9230010,True,LARSSON Thomas Erik Daniel,Male,Assistant Coach,C,NED,Netherlands,Netherlands,Handball,Women,
-9230012,True,CAROU Gonzalo,Male,Assistant Coach,C,ARG,Argentina,Argentina,Handball,Men,
-9230013,True,CAZON Guillermo,Male,Assistant Coach,C,ARG,Argentina,Argentina,Handball,Men,
+9230010,True,LARSSON Thomas Erik Daniel,Male,Assistant Coach,C,NED,Netherlands,Netherlands,Handball,Women
+9230012,True,CAROU Gonzalo,Male,Assistant Coach,C,ARG,Argentina,Argentina,Handball,Men
+9230013,True,CAZON Guillermo,Male,Assistant Coach,C,ARG,Argentina,Argentina,Handball,Men
 9230017,True,CAAMANO Juan,Male,Assistant Coach,C,ESP,Spain,Spain,Handball,Men,1990-12-06
 9230018,True,TORRESCUSA Ignacio,Male,Assistant Coach,C,ESP,Spain,Spain,Handball,Men,1994-07-21
 9230020,True,GJERDE Joar,Male,Assistant Coach,C,NOR,Norway,Norway,Handball,Women,1988-11-01
 9390001,True,BONDAR Vladyslav,Male,Coach,C,BUR,Burkina Faso,Burkina Faso,Taekwondo,,1998-03-26
-9430008,True,CICHELLO Juan Manuel,Male,Assistant Coach,C,ITA,Italy,Italy,Volleyball,Women,
+9430008,True,CICHELLO Juan Manuel,Male,Assistant Coach,C,ITA,Italy,Italy,Volleyball,Women
 9450042,True,VASSILIADES Emmanuel,Male,Assistant Coach,C,GRE,Greece,Greece,Water Polo,Men,1979-08-03
