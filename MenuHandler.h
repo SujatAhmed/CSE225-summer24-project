@@ -1,8 +1,9 @@
 
+
 #ifndef MENUHANDLER_H
 #define MENUHANDLER_H
 
-#include "Member.h"
+#include "MemberList.h"
 #include <iostream>
 #include <string>
 
