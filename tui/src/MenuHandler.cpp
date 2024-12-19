@@ -104,6 +104,9 @@ void MenuHandler::adminMenu(MemberList &memberList) {
     switch (choice) {
     case 1:
       memberList.displayMembers();
+        cout << "Press Enter to continue..."<<endl;
+        cin.ignore();
+        cin.get(); 
       break;
     case 2: {
       string username;

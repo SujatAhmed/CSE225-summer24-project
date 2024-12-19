@@ -115,6 +115,7 @@ bool MemberList::deleteMember(string username) {
 
 // Display all members (for debugging purposes)
 void MemberList::displayMembers() {
+
   Member *temp = head;
   cout << "\nRegistered Members:\n";
   while (temp) {
