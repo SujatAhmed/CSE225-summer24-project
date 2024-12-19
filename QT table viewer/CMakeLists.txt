@@ -18,6 +18,8 @@ add_executable(${PROJECT_NAME}
     Node.cpp
     Utils.cpp
     data/athletes.csv data/coaches.csv data/events.csv data/medallists.csv data/medals.csv data/medals_total.csv data/nocs.csv data/schedules.csv data/schedules_preliminary.csv data/teams.csv data/technical_officials.csv data/torch_route.csv data/venues.csv
+    TableViewer.cpp
+    TableViewer.h
 )
 
 # Include header directories
