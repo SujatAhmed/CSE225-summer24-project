@@ -12,27 +12,34 @@ set(CMAKE_AUTOMOC ON)  # Enables automatic processing of Qt MOC files
 set(CMAKE_AUTORCC ON)  # Enables automatic processing of Qt resource files
 
 # Define paths for headers and source files
-set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
-set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
+
+set(BACKEND_SRC_DIR ${CMAKE_SOURCE_DIR}/backend/src)
+set(BACKEND_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/backend/include)
+
 set(GUI_SRC_DIR ${CMAKE_SOURCE_DIR}/gui/src)
 set(GUI_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/gui/include)
 
+set(INTERFACE_SRC_DIR ${CMAKE_SOURCE_DIR}/tui/src)
+set(INTERFACE_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/tui/include)
+
 # Include directories
-include_directories(${INCLUDE_DIR} ${GUI_INCLUDE_DIR})
+include_directories(${BACKEND_INCLUDE_DIR} ${GUI_INCLUDE_DIR} ${INTERFACE_INCLUDE_DIR})
 add_subdirectory(matplotplusplus)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 qt_wrap_ui(UI ${GUI_SRC_DIR}/mainwindow.ui)
 # Collect all source files
 file(GLOB SOURCES
-    ${SRC_DIR}/*.cpp
+    ${BACKEND_SRC_DIR}/*.cpp
     ${GUI_SRC_DIR}/*.cpp
+    ${INTERFACE_SRC_DIR}/*.cpp
 )
 
 # Collect all header files (optional, for IDEs)
 file(GLOB HEADERS
-    ${INCLUDE_DIR}/*.h
+    ${BACKEND_INCLUDE_DIR}/*.h
     ${GUI_INCLUDE_DIR}/*.h
+    ${INTERFACE_INCLUDE_DIR}/*.h
 )
 
 add_executable(${PROJECT_NAME}

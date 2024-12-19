@@ -74,13 +74,15 @@ Node *LinkedList::search(int rowno) {
 // Display all nodes in the list
 void LinkedList::display() const {
   Node *current = head;
+  int i = 0;
 
-  while (current != NULL) {
+  while (current != NULL && i != 10) {
     for (const string &value : current->data) {
       cout << value << " ";
     }
     cout << endl;
     current = current->next;
+    i++;
   }
 }
 void LinkedList::returnColumn(int index, vector<string> *s) {
