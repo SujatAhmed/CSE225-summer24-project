@@ -67,7 +67,17 @@ void LinkedList::remove(int index) {
 }
 
 // Search for a key in a specific column
-Node *LinkedList::search(int rowno) {
+Node *LinkedList::search(const string &key, int &columnIndex) {
+  Node *current = head;
+
+  while (current) {
+    if (columnIndex < current->data.size() &&
+        current->data[columnIndex] == key) {
+      return current;
+    }
+    current = current->next;
+  }
+
   return nullptr; // Key not found
 }
 

@@ -1,9 +1,14 @@
 
 
 #include "Database.h"
+#include "QApplication"
+#include "QWidget"
+#include "TableViewer.h"
 #include "matplot/axes_objects/histogram.h"
+#include "searchInCSV.h"
 #include <algorithm>
 #include <matplot/matplot.h>
+#include <qwidget.h>
 #include <string>
 #include <vector>
 using namespace std;
@@ -65,7 +70,6 @@ void weightDistribution(Database *d) {
   copy_if(weightd.begin(), weightd.end(), back_inserter(filtered_weights),
           [](double h) { return h > 0.0; });
 
-
   auto h = hist(filtered_weights); // 10 bins for the histogram
 
   // Add labels and a title
@@ -76,11 +80,13 @@ void weightDistribution(Database *d) {
   h->face_color("red");
   show();
 }
-int main() {
+int main(int argc, char *argv[]) {
+  QApplication app(argc, argv);
 
-  Database *d = new Database();
-  d->loadDatabase("/home/sujat/projects/CSE225-summer24-project/data");
-  // heightDistribution(d);
-  // d->getTable("athletes.csv")->display();
-  weightDistribution(d);
+  // Hardcode the CSV file name
+  QString csvFileName = "athletes.csv"; // Update with the name of your CSV file
+  std::string dataFolder = "/home/sujat/projects/CSE225-summer24-project/data";
+  QWidget *q = nullptr;
+
+  searchInCSV(csvFileName, dataFolder);
 }

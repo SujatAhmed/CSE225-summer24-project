@@ -5,36 +5,32 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-
-
 #include "Node.h"
-#include <vector>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 class LinkedList {
 private:
-    Node* head;
-    Node* tail;
-    int size;
-
+  Node *head;
+  Node *tail;
+  int size;
 
 public:
-    vector<string> columns;
-    LinkedList();
-    ~LinkedList();
+  vector<string> columns;
+  LinkedList();
+  ~LinkedList();
 
-    void insert(const vector<string>& rowData);
-    void remove(int index); // Removes node at specified index
-    Node* search(int rowno); // Searches for a key in a specific column
-    void display() const; // Prints all nodes
-    void displayColumns();
-    void returnColumn(int index, vector<string>* s);
+  void insert(const vector<string> &rowData);
+  void remove(int index); // Removes node at specified index
+  Node *search(const string &key, int &columnIndex);
+  void display() const; // Prints all nodes
+  void displayColumns();
+  void returnColumn(int index, vector<string> *s);
 
-    int getSize() const;
-    Node* getHead() const;
+  int getSize() const;
+  Node *getHead() const;
 };
 
-
-#endif //LINKEDLIST_H
+#endif // LINKEDLIST_H
