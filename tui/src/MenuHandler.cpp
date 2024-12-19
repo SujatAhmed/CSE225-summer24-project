@@ -1,10 +1,18 @@
 
 
 #include "MenuHandler.h"
+#include "Database.h"
 #include <cstdlib>
+#include <qapplication.h>
+#include <unistd.h>
+
 #include <limits>
 
 using namespace std;
+MenuHandler::MenuHandler(Database *d, string dir) {
+  db = d;
+  directory = dir;
+}
 
 void MenuHandler::start() {
   MemberList memberList;
@@ -108,10 +116,11 @@ void MenuHandler::adminMenu(MemberList &memberList) {
       cout << "Adding Data to CSV..." << endl;
       break;
     case 4:
-      cout << "Deleting Data..." << endl;
+      DeleteData();
       break;
     case 5:
-      showDataSubmenu();
+      // showDataSubmenu();
+      ShowData();
       break;
     case 6:
       searchDataSubmenu();
@@ -126,6 +135,206 @@ void MenuHandler::adminMenu(MemberList &memberList) {
     system("pause");
   }
 }
+void MenuHandler::DeleteData() {
+  while (true) {
+    clearScreen();
+    cout << "\n===== Choose a CSV file =====\n";
+    cout << "1. athletes.csv" << endl;
+    cout << "2. coaches.csv" << endl;
+    cout << "3. events.csv" << endl;
+    cout << "4. medallists.csv" << endl;
+    cout << "5. medals.csv" << endl;
+    cout << "6. medals_total.csv" << endl;
+    cout << "7. nocs.csv" << endl;
+    cout << "8. teams.csv" << endl;
+    cout << "9. Exit" << endl;
+    cout << "Enter your choice: ";
+
+    int ch;
+    int ind;
+    cin >> ch;
+
+    // Check the user's choice
+    switch (ch) {
+    case 1:
+      cout << "You chose athletes.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("athletes.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+      break;
+    case 2:
+      cout << "You chose coaches.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("coaches.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+
+      break;
+    case 3:
+      cout << "You chose events.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("events.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+
+      break;
+    case 4:
+      cout << "You chose medallists.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("medallists.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+      break;
+    case 5:
+      cout << "You chose medals.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("medals.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+
+      break;
+    case 6:
+      cout << "You chose medals_total.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("medals_total.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+
+      break;
+    case 7:
+      cout << "You chose nocs.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("nocs.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+
+      break;
+    case 8:
+      cout << "You chose teams.csv" << endl;
+      cout << "Choose the index of the row to be deleted: " << endl;
+      cin >> ind;
+      db->getTable("teams.csv")->remove(ind - 1);
+      db->saveDatabase(directory);
+      clearScreen();
+      cout << "The row is deleted" << endl;
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
+
+      break;
+    case 9:
+      cout << "Going Back" << endl;
+      return;
+    default:
+      cout << "Invalid choice. Please try again." << endl;
+    }
+  }
+}
+void MenuHandler::ShowData() {
+  while (true) {
+    clearScreen();
+    cout << "\n===== Choose a CSV file =====\n";
+    cout << "1. athletes.csv" << endl;
+    cout << "2. coaches.csv" << endl;
+    cout << "3. events.csv" << endl;
+    cout << "4. medallists.csv" << endl;
+    cout << "5. medals.csv" << endl;
+    cout << "6. medals_total.csv" << endl;
+    cout << "7. nocs.csv" << endl;
+    cout << "8. teams.csv" << endl;
+    cout << "9. Exit" << endl;
+    cout << "Enter your choice: ";
+
+    int ch;
+    int index;
+    cin >> ch;
+
+    // Check the user's choice
+    switch (ch) {
+    case 1:
+      viewTable("athletes.csv");
+      break;
+    case 2:
+      viewTable("coaches.csv");
+
+      break;
+    case 3:
+      viewTable("events.csv");
+      break;
+    case 4:
+      viewTable("medallists.csv");
+      break;
+    case 5:
+      viewTable("medals.csv");
+
+      break;
+    case 6:
+      viewTable("medals_total.csv");
+
+      break;
+    case 7:
+      viewTable("nocs.csv");
+
+      break;
+    case 8:
+      viewTable("teams.csv");
+      break;
+    case 9:
+      cout << "Going Back" << endl;
+      return;
+    default:
+      cout << "Invalid choice. Please try again." << endl;
+    }
+  }
+}
+void MenuHandler::viewTable(string s) {
+  int argc = 0;
+  char *argv[] = {nullptr};
+  QApplication app(argc, argv);
+
+  QString csvFileName = QString::fromStdString(s);
+
+  TableViewer viewer(csvFileName, directory);
+  viewer.show();
+  app.exec();
+}
 
 void MenuHandler::userMenu() {
   while (true) {
@@ -138,7 +347,8 @@ void MenuHandler::userMenu() {
 
     switch (choice) {
     case 1:
-      showDataSubmenu();
+
+      ShowData();
       break;
     case 2:
       searchDataSubmenu();
@@ -153,35 +363,15 @@ void MenuHandler::userMenu() {
     system("pause");
   }
 }
+void MenuHandler::searchTable(string s) {
+  int argc = 0;
 
-void MenuHandler::showDataSubmenu() {
-  clearScreen();
-  cout << "\n===== Show Data =====" << endl;
-  cout << "1. Athletes Data" << endl;
-  cout << "2. Coaches Data" << endl;
-  cout << "3. Teams Data" << endl;
-  cout << "4. Back" << endl;
-  cout << "Enter your choice: ";
+  char *argv[] = {nullptr};
+  QApplication app(argc, argv);
 
-  int choice;
-  cin >> choice;
+  QString csvFileName = QString::fromStdString(s);
 
-  switch (choice) {
-  case 1:
-    cout << "Displaying Athletes Data..." << endl;
-    break;
-  case 2:
-    cout << "Displaying Coaches Data..." << endl;
-    break;
-  case 3:
-    cout << "Displaying Teams Data..." << endl;
-    break;
-  case 4:
-    return;
-  default:
-    cout << "Invalid choice! Try again." << endl;
-  }
-  system("pause");
+  searchInCSV(csvFileName, directory);
 }
 
 void MenuHandler::searchDataSubmenu() {
@@ -199,13 +389,14 @@ void MenuHandler::searchDataSubmenu() {
 
     switch (choice) {
     case 1:
-      searchAthletesData();
+      searchTable("athletes.csv");
       break;
     case 2:
-      searchCoachesData();
+      searchTable("coaches.csv");
+
       break;
     case 3:
-      searchTeamsData();
+      searchTable("teams.csv");
       break;
     case 4:
       cout << "Returning to the previous menu...\n";
@@ -215,18 +406,6 @@ void MenuHandler::searchDataSubmenu() {
     }
     system("pause");
   }
-}
-
-void MenuHandler::searchAthletesData() {
-  cout << "Searching for Athletes Data..." << endl;
-}
-
-void MenuHandler::searchCoachesData() {
-  cout << "Searching for Coaches Data..." << endl;
-}
-
-void MenuHandler::searchTeamsData() {
-  cout << "Searching for Teams Data..." << endl;
 }
 
 void MenuHandler::clearScreen() {

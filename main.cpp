@@ -1,16 +1,17 @@
 
 
 #include "Database.h"
+#include "MenuHandler.h"
 #include "QApplication"
 #include "QWidget"
-#include "TableViewer.h"
 #include "matplot/axes_objects/histogram.h"
-#include "searchInCSV.h"
 #include <algorithm>
 #include <matplot/matplot.h>
 #include <qwidget.h>
 #include <string>
 #include <vector>
+// #include "MemberList.h"
+
 using namespace std;
 using namespace matplot;
 
@@ -80,13 +81,15 @@ void weightDistribution(Database *d) {
   h->face_color("red");
   show();
 }
+
 int main(int argc, char *argv[]) {
-  QApplication app(argc, argv);
-
-  // Hardcode the CSV file name
+  std::string dataFolder = "/home/sujat/projects/CSE225-summer24-project/data1";
   QString csvFileName = "athletes.csv"; // Update with the name of your CSV file
-  std::string dataFolder = "/home/sujat/projects/CSE225-summer24-project/data";
-  QWidget *q = nullptr;
 
-  searchInCSV(csvFileName, dataFolder);
+  Database *db = new Database();
+
+  db->loadDatabase(dataFolder);
+
+  MenuHandler h(db, dataFolder);
+  h.start();
 }
