@@ -6,6 +6,7 @@
 #include "QWidget"
 #include <qwidget.h>
 #include <string>
+#include "Graphs.h"
 #include <vector>
 
 using namespace std;
@@ -17,7 +18,8 @@ int main(int argc, char *argv[]) {
   Database *db = new Database();
 
   db->loadDatabase(dataFolder);
+  Graph g; 
+  g.genderDistribution(db);
 
-  MenuHandler h(db, dataFolder);
-  h.start();
+
 }
