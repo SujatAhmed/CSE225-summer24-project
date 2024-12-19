@@ -1,36 +1,11 @@
+
 #include "MenuHandler.h"
-
-int main() {
-    MenuHandler menuHandler;
-    menuHandler.start();
-    return 0;
-}
-
-
-
-/*
-#include "Member.h"
-#include <iostream>
 #include <cstdlib>
-#include <windows.h>
 #include <limits>
+
 using namespace std;
 
-// Function prototypes
-void start();
-void registerMember(MemberList& memberList);
-void loginMember(MemberList& memberList);
-void adminMenu(MemberList& memberList);
-void userMenu();
-void showDataSubmenu();
-void searchDataSubmenu();
-void searchAthletesData();
-void searchCoachesData();
-void searchTeamsData();
-void clearScreen();
-
-// Start the menu system
-void start() {
+void MenuHandler::start() {
     MemberList memberList;
 
     while (true) {
@@ -50,8 +25,7 @@ void start() {
     }
 }
 
-// Handle login
-void loginMember(MemberList& memberList) {
+void MenuHandler::loginMember(MemberList& memberList) {
     string username, password;
 
     clearScreen();
@@ -63,7 +37,7 @@ void loginMember(MemberList& memberList) {
 
     string memberType = memberList.loginMember(username, password);
     if (memberType == "admin") {
-            system("pause");
+        system("pause");
         adminMenu(memberList);
     } else if (memberType == "user") {
         system("pause");
@@ -74,8 +48,7 @@ void loginMember(MemberList& memberList) {
     }
 }
 
-// Handle registration
-void registerMember(MemberList& memberList) {
+void MenuHandler::registerMember(MemberList& memberList) {
     string name, username, password, type;
 
     clearScreen();
@@ -97,8 +70,7 @@ void registerMember(MemberList& memberList) {
     system("pause");
 }
 
-// Admin menu
-void adminMenu(MemberList& memberList) {
+void MenuHandler::adminMenu(MemberList& memberList) {
     while (true) {
         clearScreen();
         cout << "\n===== Admin Menu =====\n";
@@ -126,18 +98,18 @@ void adminMenu(MemberList& memberList) {
                 cout << "Adding Data to CSV..." << endl;
                 break;
             case 4:
-            cout << "Deleting Data..." << endl;
-            break;
-        case 5:
-            showDataSubmenu();
-            break;
-        case 6:
-            searchDataSubmenu();
-            break;
-        case 7:
-            cout << "Logging out...\n";
-            system("pause");
-            return;
+                cout << "Deleting Data..." << endl;
+                break;
+            case 5:
+                showDataSubmenu();
+                break;
+            case 6:
+                searchDataSubmenu();
+                break;
+            case 7:
+                cout << "Logging out...\n";
+                system("pause");
+                return;
             default:
                 cout << "Invalid choice! Try again." << endl;
         }
@@ -145,8 +117,7 @@ void adminMenu(MemberList& memberList) {
     }
 }
 
-// User menu
-void userMenu() {
+void MenuHandler::userMenu() {
     while (true) {
         clearScreen();
         cout << "\n===== User Menu =====\n";
@@ -163,27 +134,25 @@ void userMenu() {
                 system("pause");
                 return;
             default:
-                cout << "Invalid choice! Try again."<<endl;
+                cout << "Invalid choice! Try again." << endl;
         }
         system("pause");
     }
 }
 
-// Placeholder for showing data submenu
-void showDataSubmenu() {
+void MenuHandler::showDataSubmenu() {
     clearScreen();
-        cout << "\n===== Show Data =====" << endl;
-        cout << "1. Athletes Data" << endl;
-        cout << "2. Coaches Data" << endl;
-        cout << "3. Teams Data" << endl;
-        cout << "4. Back" << endl;
-        cout << "Enter your choice: ";
+    cout << "\n===== Show Data =====" << endl;
+    cout << "1. Athletes Data" << endl;
+    cout << "2. Coaches Data" << endl;
+    cout << "3. Teams Data" << endl;
+    cout << "4. Back" << endl;
+    cout << "Enter your choice: ";
 
-        int choice;
-        cin >> choice;
+    int choice;
+    cin >> choice;
 
-        switch (choice)
-        {
+    switch (choice) {
         case 1:
             cout << "Displaying Athletes Data..." << endl;
             break;
@@ -197,15 +166,12 @@ void showDataSubmenu() {
             return;
         default:
             cout << "Invalid choice! Try again." << endl;
-        }
-        system("pause");
-
+    }
+    system("pause");
 }
 
-// Placeholder for search data submenu
-void searchDataSubmenu() {
-    while (true)
-    {
+void MenuHandler::searchDataSubmenu() {
+    while (true) {
         clearScreen();
         cout << "\n===== Search Data =====" << endl;
         cout << "1. Athletes Data" << endl;
@@ -217,60 +183,42 @@ void searchDataSubmenu() {
         int choice;
         cin >> choice;
 
-        switch (choice)
-        {
-        case 1:
-            searchAthletesData();
-            break;
-        case 2:
-            searchCoachesData();
-            break;
-        case 3:
-            searchTeamsData();
-            break;
-        case 4:
-            cout << "Returning to the previous menu...\n";
-            return;
-        default:
-            cout << "Invalid choice! Please try again." << endl;
+        switch (choice) {
+            case 1:
+                searchAthletesData();
+                break;
+            case 2:
+                searchCoachesData();
+                break;
+            case 3:
+                searchTeamsData();
+                break;
+            case 4:
+                cout << "Returning to the previous menu...\n";
+                return;
+            default:
+                cout << "Invalid choice! Please try again." << endl;
         }
         system("pause");
     }
 }
 
-// Placeholder function to search for athletes' data
-void searchAthletesData()
-{
+void MenuHandler::searchAthletesData() {
     cout << "Searching for Athletes Data..." << endl;
-    // Implement specific logic for athletes data search
 }
 
-// Placeholder function to search for coaches' data
-void searchCoachesData()
-{
+void MenuHandler::searchCoachesData() {
     cout << "Searching for Coaches Data..." << endl;
-    // Implement specific logic for coaches data search
 }
 
-// Placeholder function to search for teams' data
-void searchTeamsData()
-{
+void MenuHandler::searchTeamsData() {
     cout << "Searching for Teams Data..." << endl;
-    // Implement specific logic for teams data search
 }
 
-// Clear screen utility
-void clearScreen() {
+void MenuHandler::clearScreen() {
 #ifdef _WIN32
     system("cls");
 #else
     system("clear");
 #endif
 }
-
-// Main function
-int main() {
-    start();
-    return 0;
-}
-*/
