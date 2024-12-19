@@ -1,7 +1,6 @@
 #include "Member.h"
 #include <iostream>
 #include <cstdlib>
-#include <cstdlib>
 #include <windows.h>
 #include <limits>
 using namespace std;
@@ -19,11 +18,9 @@ void searchCoachesData();
 void searchTeamsData();
 void clearScreen();
 
-
-
-// Function to start the menu system
+// Start the menu system
 void start() {
-    MemberList memberList; // Object to manage members
+    MemberList memberList;
 
     while (true) {
         clearScreen();
@@ -42,7 +39,7 @@ void start() {
     }
 }
 
-// Function to handle login
+// Handle login
 void loginMember(MemberList& memberList) {
     string username, password;
 
@@ -55,8 +52,10 @@ void loginMember(MemberList& memberList) {
 
     string memberType = memberList.loginMember(username, password);
     if (memberType == "admin") {
+            system("pause");
         adminMenu(memberList);
     } else if (memberType == "user") {
+        system("pause");
         userMenu();
     } else {
         cout << "Invalid credentials. Please try again.\n";
@@ -64,7 +63,7 @@ void loginMember(MemberList& memberList) {
     }
 }
 
-// Function to handle registration
+// Handle registration
 void registerMember(MemberList& memberList) {
     string name, username, password, type;
 
@@ -106,18 +105,16 @@ void adminMenu(MemberList& memberList) {
         switch (choice) {
             case 1: memberList.displayMembers(); break;
             case 2: {
-                string username, adminPassword;
+                string username;
                 cout << "Enter Username to Delete: ";
                 cin >> username;
-                cout << "Enter Admin Password: ";
-                cin >> adminPassword;
-                memberList.deleteMember(username, adminPassword);
+                memberList.deleteMember(username);
                 break;
             }
-                    case 3:
-            cout << "Adding Data to CSV..." << endl;
-            break;
-        case 4:
+            case 3:
+                cout << "Adding Data to CSV..." << endl;
+                break;
+            case 4:
             cout << "Deleting Data..." << endl;
             break;
         case 5:
@@ -130,10 +127,9 @@ void adminMenu(MemberList& memberList) {
             cout << "Logging out...\n";
             system("pause");
             return;
-        default:
-            cout << "Invalid choice! Try again." << endl;
+            default:
+                cout << "Invalid choice! Try again." << endl;
         }
-
         system("pause");
     }
 }
@@ -143,37 +139,28 @@ void userMenu() {
     while (true) {
         clearScreen();
         cout << "\n===== User Menu =====\n";
-        cout << "1. Show Data \n2. Search Data \n3. Logout \nEnter your choice: ";
+        cout << "1. Show Data\n2. Search Data\n3. Logout\nEnter your choice: ";
 
         int choice;
         cin >> choice;
 
         switch (choice) {
-            case 1:
-            showDataSubmenu();
-            break;
-
-                case 2:
-            searchDataSubmenu();
-            break;
-         case 3:
-            cout << "Logging out...\n";
-            system("pause");
-            return;
-        default:
-            cout << "Invalid choice! Try again." << endl;
+            case 1: showDataSubmenu(); break;
+            case 2: searchDataSubmenu(); break;
+            case 3:
+                cout << "Logging out...\n";
+                system("pause");
+                return;
+            default:
+                cout << "Invalid choice! Try again."<<endl;
         }
         system("pause");
     }
 }
 
-
-// Show data submenu
-void showDataSubmenu()
-{
-    while (true)
-    {
-        clearScreen();
+// Placeholder for showing data submenu
+void showDataSubmenu() {
+    clearScreen();
         cout << "\n===== Show Data =====" << endl;
         cout << "1. Athletes Data" << endl;
         cout << "2. Coaches Data" << endl;
@@ -201,12 +188,11 @@ void showDataSubmenu()
             cout << "Invalid choice! Try again." << endl;
         }
         system("pause");
-    }
+
 }
 
-// Submenu for search data
-void searchDataSubmenu()
-{
+// Placeholder for search data submenu
+void searchDataSubmenu() {
     while (true)
     {
         clearScreen();
@@ -240,6 +226,7 @@ void searchDataSubmenu()
         system("pause");
     }
 }
+
 // Placeholder function to search for athletes' data
 void searchAthletesData()
 {
@@ -261,20 +248,14 @@ void searchTeamsData()
     // Implement specific logic for teams data search
 }
 
-
-// Clear screen function
+// Clear screen utility
 void clearScreen() {
-
+#ifdef _WIN32
     system("cls");
+#else
+    system("clear");
+#endif
 }
-
-
-
-
-
-
-
-
 
 // Main function
 int main() {

@@ -1,5 +1,3 @@
-
-
 #ifndef MEMBER_H
 #define MEMBER_H
 
@@ -10,11 +8,11 @@
 
 using namespace std;
 
+// Structure to hold member details
 struct Member {
     string name;
     string username;
     string password;
-    string adminPassword = "admin123";
     string memberType;
     Member* next;
 
@@ -22,6 +20,7 @@ struct Member {
         : name(n), username(u), password(p), memberType(t), next(nullptr) {}
 };
 
+// Class to manage the list of members
 class MemberList {
 private:
     Member* head; // Linked list head
@@ -37,7 +36,7 @@ public:
 
     bool registerMember(string name, string username, string password, string type);
     string loginMember(string username, string password);
-    bool deleteMember(string username, string adminPassword);
+    bool deleteMember(string username);
     void displayMembers();
 };
 

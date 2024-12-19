@@ -5,7 +5,7 @@ MemberList::MemberList() : head(nullptr) {
     loadFromCSV();
 }
 
-// Destructor: Save to CSV and free memory
+// Destructor: Save members to CSV and free memory
 MemberList::~MemberList() {
     saveToCSV();
     while (head) {
@@ -15,7 +15,7 @@ MemberList::~MemberList() {
     }
 }
 
-// Check if username already exists
+// Check if username already exists in the list
 bool MemberList::usernameExists(const string& username) {
     Member* temp = head;
     while (temp) {
@@ -25,7 +25,7 @@ bool MemberList::usernameExists(const string& username) {
     return false;
 }
 
-// Load members from CSV
+// Load members from CSV file
 void MemberList::loadFromCSV() {
     ifstream file(csvFileName);
     if (!file.is_open()) return;
@@ -45,7 +45,7 @@ void MemberList::loadFromCSV() {
     file.close();
 }
 
-// Save members to CSV
+// Save members to CSV file
 void MemberList::saveToCSV() {
     ofstream file(csvFileName);
     Member* temp = head;
@@ -71,7 +71,6 @@ bool MemberList::registerMember(string name, string username, string password, s
     newMember->next = head;
     head = newMember;
     saveToCSV();
-    cout << "Registration successful!\n";
     return true;
 }
 
@@ -88,27 +87,15 @@ string MemberList::loginMember(string username, string password) {
     return "";
 }
 
-// Delete a member (admin only)
-bool MemberList::deleteMember(string username, string adminPassword) {
-    // Check admin password
-    Member* temp = head;
-    while (temp) {
-        if (temp->username == "admin" && temp->password == adminPassword) {
-            break;
-        }
-        temp = temp->next;
-    }
-    if (!temp) {
-        cout << "Error: Invalid admin password!\n";
-        return false;
-    }
-
-    // Delete member
+// Delete a member (admin only, no password required)
+bool MemberList::deleteMember(string username) {
     Member *curr = head, *prev = nullptr;
+
     while (curr) {
         if (curr->username == username) {
             if (prev) prev->next = curr->next;
             else head = curr->next;
+
             delete curr;
             saveToCSV();
             cout << "Member deleted successfully.\n";
@@ -121,7 +108,7 @@ bool MemberList::deleteMember(string username, string adminPassword) {
     return false;
 }
 
-// Display all members (debugging purpose)
+// Display all members (for debugging purposes)
 void MemberList::displayMembers() {
     Member* temp = head;
     cout << "\nRegistered Members:\n";
