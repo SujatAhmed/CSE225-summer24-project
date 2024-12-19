@@ -20,6 +20,6 @@ int main(int argc, char *argv[]) {
   db->loadDatabase(dataFolder);
   Graph g; 
   g.genderDistribution(db);
-
+  g.totalNOofMedalsbyCountry(db);
 
 }

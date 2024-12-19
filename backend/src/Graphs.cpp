@@ -118,4 +118,39 @@ void Graph ::genderDistribution(Database *d) {
                      "gender_distribution.jpg";
   save(save_path);
 }
-void G
+void Graph::totalNOofMedalsbyCountry(Database *d) {
+
+  std::vector<std::string> *countries = new std::vector<std::string>();
+  d->getTable("medals_total.csv")->returnColumn(0, countries);
+
+  std::vector<std::string> *total_medals = new std::vector<std::string>();
+  d->getTable("medals_total.csv")->returnColumn(6, total_medals);
+
+  std::vector<int> int_medals;
+
+  // Loop through the total_medals vector, convert each element to an integer
+  // and push it to int_medals
+  for (const std::string &medal : *total_medals) {
+    try {
+      int_medals.push_back(stod(medal));
+    } catch (const invalid_argument &e) {
+      cerr << "Invalid input: '" << medal << "' cannot be converted to double"
+           << endl;
+    } catch (const out_of_range &e) {
+      cerr << "Out of range error: '" << medal << "' is too large to be a double"
+           << endl;
+    }
+  }
+
+   auto b = bar(int_medals);
+  // b->face_color(map_values(total_medals));
+   gca()->x_axis().ticklabels(*countries);
+
+   title("Number of Medals by Country");
+   xlabel("Country Code");
+   ylabel("Number of Medals");
+  string save_path = "/home/sujat/projects/CSE225-summer24-project/charts/"
+                     "medals_by_country.jpg";
+  save(save_path);
+
+}
