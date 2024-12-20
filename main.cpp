@@ -17,6 +17,8 @@ int main(int argc, char *argv[]) {
   //
   Database *db = new Database();
   db->loadDatabase(dataFolder);
+  cout << "works" << endl;
+
   MenuHandler menu(db, dataFolder);
   menu.start();
 

@@ -56,7 +56,7 @@ void TableViewer::setupTable(const QString &csvFileName, const std::string &data
         ++row;
     }
 
-    tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    tableWidget->setEditTriggers(QAbstractItemView::AllEditTriggers);
     tableWidget->setSelectionMode(QAbstractItemView::NoSelection);
     tableWidget->resizeColumnsToContents();
     tableWidget->resizeRowsToContents();

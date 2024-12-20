@@ -15,6 +15,7 @@ public:
   void weightDistribution(Database *d);
   void genderDistribution(Database *d);
   void totalNOofMedalsbyCountry(Database *d);
+  void topMedalists(Database *d);
 };
 
 #endif // GRAPH_H

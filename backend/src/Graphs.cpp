@@ -8,6 +8,8 @@
 #include <matplot/axes_objects/bars.h>
 #include <stdexcept>
 #include <string>
+#include <unordered_map>
+#include <utility>
 
 using namespace std;
 using namespace matplot;
@@ -133,6 +135,7 @@ void Graph::totalNOofMedalsbyCountry(Database *d) {
 
   // Loop through the total_medals vector, convert each element to an integer
   // and push it to int_medals
+  int i = 0;
   for (const std::string &medal : *total_medals) {
     try {
       int_medals.push_back(stod(medal));
@@ -143,6 +146,10 @@ void Graph::totalNOofMedalsbyCountry(Database *d) {
       cerr << "Out of range error: '" << medal
            << "' is too large to be a double" << endl;
     }
+    i++;
+    if(i==15){
+      break;
+    }
   }
 
   auto b = bar(int_medals, 0.6);
@@ -152,11 +159,59 @@ void Graph::totalNOofMedalsbyCountry(Database *d) {
   xlabel("Country Code");
   title("Number of Medals by Country");
   ylabel("Number of Medals");
-  cout << countries->size() <<endl;
-  cout << int_medals.size() <<endl;
+  cout << countries->size() << endl;
+  cout << int_medals.size() << endl;
   gca()->x_axis().ticklabels(*countries);
 
-  string save_path = "/home/sujat/projects/CSE225-summer24-project/charts/countries_by_total_medals.jpg";
-  //save(save_path);
-  //show();
+  string save_path = "/home/sujat/projects/CSE225-summer24-project/charts/"
+                     "countries_by_total_medals.jpg";
+   save(save_path);
+}
+void Graph ::topMedalists(Database *d) {
+
+  cout << "entered functin" << endl;
+  vector<string> *medalists = new vector<string>();
+  d->getTable("medallists.csv")->returnColumn(3, medalists);
+  std::unordered_map<std::string, int> medalistCounts;
+
+  for (const std::string &medalist : *medalists) {
+    medalistCounts[medalist]++;
+  }
+
+  // Output the counts
+  // for (const auto &entry : medalistCounts) {
+  // std::cout << entry.first << ": " << entry.second << " medals" << std::endl;
+  //}
+  std::vector<std::pair<std::string, int>> sortedCounts(medalistCounts.begin(),
+                                                        medalistCounts.end());
+
+  std::sort(sortedCounts.begin(), sortedCounts.end(),
+            [](const auto &a, const auto &b) {
+              return a.second > b.second; // Sort by count in descending order
+            });
+
+  vector<int> nOmedals;
+  vector<string> athletes;
+  int i = 0;
+  // Output the sorted counts
+  for (const auto &entry : sortedCounts) {
+    std::cout << entry.first << ": " << entry.second << " medals" << std::endl;
+    athletes.push_back(entry.first);
+    nOmedals.push_back(entry.second);
+    i++;
+    if (i == 6) {
+      break;
+    }
+  }
+  auto b = bar(nOmedals, 0.4);
+  vector<string> count;
+
+  // Set x-axis tick labels using country codes
+  xlabel("Athletes");
+  title("Top Medalists");
+  ylabel("Number of Medals");
+  gca()->x_axis().ticklabels(athletes);
+  string save_path = "/home/sujat/projects/CSE225-summer24-project/charts/"
+                     "top_medalists.jpg";
+  save(save_path);
 }
