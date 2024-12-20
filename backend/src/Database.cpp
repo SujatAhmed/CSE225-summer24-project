@@ -8,6 +8,8 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <string>
+#include <vector>
 
 using namespace std;
 using namespace std::filesystem;
@@ -98,13 +100,40 @@ void Database::saveDatabase(const string &directoryPath) {
 // Helper function to escape fields for CSV format
 
 // Insert a new row into a specific table
-void Database::insert(const string &tableName, const vector<string> &rowData) {
-  if (tables.find(tableName) == tables.end()) {
-    throw invalid_argument("Table " + tableName + " does not exist.");
+/*void Database::insert(const string &tableName, const vector<string> &rowData)
+{ if (tables.find(tableName) == tables.end()) { throw invalid_argument("Table "
++ tableName + " does not exist.");
   }
 
   tables[tableName]->insert(rowData);
   cout << "Row inserted into " << tableName << " successfully." << endl;
+}*/
+void Database::insert(const string &tableName) {
+  /*if (tables.find(tableName) == tables.end()) {
+    throw invalid_argument("Table " + tableName + " does not exist.");
+  }
+
+  ifstream file(tableName);
+  if (!file.is_open()) {
+    std::cerr << "Error: Could not open file " << tableName << std::endl;
+  }*/
+
+
+  vector<string> columns;
+  string temp;
+
+  columns = this->getTable(tableName)->columns;
+
+  vector<string> rowData;
+  for (size_t i = 0; i < columns.size(); ++i) {
+    cout << "Enter data for column '" << columns[i] << "': ";
+    cin >> temp;
+    rowData.push_back(temp);
+  }
+
+  tables[tableName]->insert(rowData);
+  cout << "Row inserted into " << tableName << " successfully." << endl;
+  this->saveDatabase("/home/sujat/projects/CSE225-summer24-project/data1/");
 }
 
 // Remove a row from a specific table at a given index

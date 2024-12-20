@@ -41,6 +41,7 @@ void MenuHandler::start() {
     }
   }
 }
+
 void MenuHandler::loginMember(MemberList &memberList) {
   string username, password;
 
@@ -95,7 +96,8 @@ void MenuHandler::adminMenu(MemberList &memberList) {
     cout << "4. Delete Data" << endl;
     cout << "5. Show Data" << endl;
     cout << "6. Search Data" << endl;
-    cout << "7. Logout" << endl;
+    cout << "7. Show Analysis" << endl;
+    cout << "8. Logout" << endl;
     cout << "Enter your choice: ";
 
     int choice;
@@ -104,9 +106,9 @@ void MenuHandler::adminMenu(MemberList &memberList) {
     switch (choice) {
     case 1:
       memberList.displayMembers();
-        cout << "Press Enter to continue..."<<endl;
-        cin.ignore();
-        cin.get(); 
+      cout << "Press Enter to continue..." << endl;
+      cin.ignore();
+      cin.get();
       break;
     case 2: {
       string username;
@@ -116,7 +118,7 @@ void MenuHandler::adminMenu(MemberList &memberList) {
       break;
     }
     case 3:
-      cout << "Adding Data to CSV..." << endl;
+      addData();
       break;
     case 4:
       DeleteData();
@@ -129,6 +131,10 @@ void MenuHandler::adminMenu(MemberList &memberList) {
       searchDataSubmenu();
       break;
     case 7:
+      showGraphs();
+      break;
+
+    case 8:
       cout << "Logging out...\n";
       system("pause");
       return;
@@ -327,6 +333,63 @@ void MenuHandler::ShowData() {
     }
   }
 }
+void MenuHandler::addData() {
+  while (true) {
+    clearScreen();
+    cout << "\n===== Choose a CSV file =====\n";
+    cout << "1. athletes.csv" << endl;
+    cout << "2. coaches.csv" << endl;
+    cout << "3. events.csv" << endl;
+    cout << "4. medallists.csv" << endl;
+    cout << "5. medals.csv" << endl;
+    cout << "6. medals_total.csv" << endl;
+    cout << "7. nocs.csv" << endl;
+    cout << "8. teams.csv" << endl;
+    cout << "9. Exit" << endl;
+    cout << "Enter your choice: ";
+
+    int ch;
+    int index;
+    cin >> ch;
+
+    // Check the user's choice
+    switch (ch) {
+    case 1:
+      db->insert("athletes.csv");
+      break;
+    case 2:
+      db->insert("coaches.csv");
+
+      break;
+    case 3:
+      db->insert("events.csv");
+      break;
+    case 4:
+      db->insert("medallists.csv");
+      break;
+    case 5:
+      db->insert("medals.csv");
+
+      break;
+    case 6:
+      db->insert("medals_total.csv");
+
+      break;
+    case 7:
+      db->insert("nocs.csv");
+
+      break;
+    case 8:
+      db->insert("teams.csv");
+      break;
+    case 9:
+      cout << "Going Back" << endl;
+      return;
+    default:
+      cout << "Invalid choice. Please try again." << endl;
+    }
+  }
+}
 void MenuHandler::viewTable(string s) {
   int argc = 0;
   char *argv[] = {nullptr};
@@ -343,7 +406,7 @@ void MenuHandler::userMenu() {
   while (true) {
     clearScreen();
     cout << "\n===== User Menu =====\n";
-    cout << "1. Show Data\n2. Search Data\n3. Logout\nEnter your choice: ";
+    cout << "1. Show Data\n2. Search Data\n3.Show Analysis \n4. Logout\nEnter your choice: ";
 
     int choice;
     cin >> choice;
@@ -357,6 +420,9 @@ void MenuHandler::userMenu() {
       searchDataSubmenu();
       break;
     case 3:
+      showGraphs();
+      break;
+    case 4:
       cout << "Logging out...\n";
       system("pause");
       return;
@@ -375,6 +441,16 @@ void MenuHandler::searchTable(string s) {
   QString csvFileName = QString::fromStdString(s);
 
   searchInCSV(csvFileName, directory);
+}
+void MenuHandler::showGraphs() {
+
+  int argc = 0;
+  char *argv[] = {nullptr};
+  QApplication app(argc, argv);
+
+  ParisOlympicsAnalysis viewer;
+  viewer.show();
+  app.exec();
 }
 
 void MenuHandler::searchDataSubmenu() {

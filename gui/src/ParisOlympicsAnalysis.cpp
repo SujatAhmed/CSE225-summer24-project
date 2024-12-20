@@ -22,7 +22,7 @@ ParisOlympicsAnalysis::ParisOlympicsAnalysis(QWidget *parent)
   resize(800, 600);
 
   // Set the specific folder path directly in the code
-  imageFolder = "/home/sujat/core/images/"; // Set your desired folder path here
+  imageFolder = "/home/sujat/projects/CSE225-summer24-project/charts/"; // Set your desired folder path here
   loadImagesFromFolder();
 }
 

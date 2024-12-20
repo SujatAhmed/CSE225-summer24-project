@@ -5,7 +5,9 @@
 #include "matplot/freestanding/plot.h"
 #include <algorithm>
 #include <iostream>
+#include <matplot/axes_objects/bars.h>
 #include <stdexcept>
+#include <string>
 
 using namespace std;
 using namespace matplot;
@@ -104,6 +106,7 @@ void Graph ::genderDistribution(Database *d) {
   vector<int> counts = {male_counter, female_counter};
 
   auto b = bar(counts);
+  b->bar_width(0.5);
 
   title("Gender Distribution of Athletes");
   xlabel("Gender");
@@ -137,20 +140,23 @@ void Graph::totalNOofMedalsbyCountry(Database *d) {
       cerr << "Invalid input: '" << medal << "' cannot be converted to double"
            << endl;
     } catch (const out_of_range &e) {
-      cerr << "Out of range error: '" << medal << "' is too large to be a double"
-           << endl;
+      cerr << "Out of range error: '" << medal
+           << "' is too large to be a double" << endl;
     }
   }
 
-   auto b = bar(int_medals);
-  // b->face_color(map_values(total_medals));
-   gca()->x_axis().ticklabels(*countries);
+  auto b = bar(int_medals, 0.6);
+  vector<string> count;
 
-   title("Number of Medals by Country");
-   xlabel("Country Code");
-   ylabel("Number of Medals");
-  string save_path = "/home/sujat/projects/CSE225-summer24-project/charts/"
-                     "medals_by_country.jpg";
-  save(save_path);
+  // Set x-axis tick labels using country codes
+  xlabel("Country Code");
+  title("Number of Medals by Country");
+  ylabel("Number of Medals");
+  cout << countries->size() <<endl;
+  cout << int_medals.size() <<endl;
+  gca()->x_axis().ticklabels(*countries);
 
+  string save_path = "/home/sujat/projects/CSE225-summer24-project/charts/countries_by_total_medals.jpg";
+  //save(save_path);
+  //show();
 }

@@ -96,7 +96,7 @@ void LinkedList::display() const {
   }
 }
 void LinkedList::returnColumn(int index, vector<string> *s) {
-  Node *current = head;
+  Node *current = head->next;
   while (current != NULL) {
     cout << current->data[index] << endl;
     s->push_back(current->data[index]);

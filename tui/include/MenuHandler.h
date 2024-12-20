@@ -10,6 +10,7 @@
 #include <iostream>
 #include <qapplication.h>
 #include <string>
+#include "ParisOlympicsAnalysis.h"
 
 class MenuHandler {
 public:
@@ -33,4 +34,6 @@ private:
   void ShowData();
   void viewTable(string s);
   void searchTable(string s);
+  void showGraphs();
+  void addData();
 };
