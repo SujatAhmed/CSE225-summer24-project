@@ -1,5 +1,3 @@
-
-
 #include "Database.h"
 #include "Graphs.h"
 #include "MenuHandler.h"

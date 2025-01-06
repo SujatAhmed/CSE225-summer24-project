@@ -178,10 +178,6 @@ void Graph ::topMedalists(Database *d) {
     medalistCounts[medalist]++;
   }
 
-  // Output the counts
-  // for (const auto &entry : medalistCounts) {
-  // std::cout << entry.first << ": " << entry.second << " medals" << std::endl;
-  //}
   std::vector<std::pair<std::string, int>> sortedCounts(medalistCounts.begin(),
                                                         medalistCounts.end());
 
